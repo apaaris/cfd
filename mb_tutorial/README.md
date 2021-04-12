@@ -1,3 +1,3 @@
 ##Results
 
-![Pressure](/pics/p.png)
+![Pressure](pics/p.png)
