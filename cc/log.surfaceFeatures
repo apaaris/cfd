@@ -1,0 +1,72 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8
+Exec   : surfaceFeatures
+Date   : Apr 14 2021
+Time   : 21:03:41
+Host   : "Arch"
+PID    : 22413
+I/O    : uncollated
+Case   : /home/apaaris/git/cfd/cc
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeaturesDict
+
+Surface            : "monkey.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 62976
+Vertices     : 31658
+Bounding Box : (1.17727 -1.32941 3.02786) (2.77967 1.32941 4.93992)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 5
+    feature edges  : 419
+    of which
+        region edges   : 336
+        external edges : 4
+        internal edges : 79
+
+
+Final feature set:
+points      : 435
+edges       : 419
+boundingBox : (1.21995 -1.22451 3.82479) (2.46829 1.22451 4.49821)
+point classification :
+    convex feature points          :        1
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :      430
+edge classification :
+    external (convex angle) edges  :        4
+    internal (concave angle) edges :       79
+    flat region edges              :        0
+    open edges                     :      336
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "constant/extendedFeatureEdgeMesh/monkey.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "constant/triSurface/monkey.eMesh"
+
+ExecutionTime = 0.18 s  ClockTime = 0 s
+
+End
+

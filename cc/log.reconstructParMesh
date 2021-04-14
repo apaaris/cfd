@@ -1,0 +1,123 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8
+Exec   : reconstructParMesh -constant
+Date   : Apr 14 2021
+Time   : 21:09:55
+Host   : "Arch"
+PID    : 23018
+I/O    : uncollated
+Case   : /home/apaaris/git/cfd/cc
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+This is an experimental tool which tries to merge individual processor
+meshes back into one master mesh. Use it if the original master mesh has
+been deleted or if the processor meshes have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge tolerance : 1e-07
+Write tolerance : 1e-06
+Doing geometric matching on correct procBoundaries only.
+This assumes a correct decomposition.
+Found 4 processor directories
+
+Reading database "cc/processor0"
+Reading database "cc/processor1"
+Reading database "cc/processor2"
+Reading database "cc/processor3"
+Time = constant
+
+Reading points from "cc/processor0" for time = constant
+
+Reading points from "cc/processor1" for time = constant
+
+Reading points from "cc/processor2" for time = constant
+
+Reading points from "cc/processor3" for time = constant
+
+Overall mesh bounding box  : (-5 -4 0) (15 4 8)
+Relative tolerance         : 1e-07
+Absolute matching distance : 2.29783e-06
+
+Merging mesh 0 with 1
+Merging mesh 2 with 3
+Merging mesh 0 with 2
+Reading mesh to add from "cc/processor0" for time = constant
+
+
+Reading mesh to add from "cc/processor1" for time = constant
+
+
+Reading mesh to add from "cc/processor2" for time = constant
+
+
+Reading mesh to add from "cc/processor3" for time = constant
+
+
+mergeSharedPoints : detected 0 points that are to be merged.
+
+Writing merged mesh to "/home/apaaris/git/cfd/cc/constant"
+
+Reconstructing the addressing from the processor meshes to the newly reconstructed mesh
+
+Reading processor 0 mesh from "cc/processor0"
+Writing pointProcAddressing to "cc/processor0/constant/polyMesh"
+Writing faceProcAddressing to "cc/processor0/constant/polyMesh"
+Writing cellProcAddressing to "cc/processor0/constant/polyMesh"
+Writing boundaryProcAddressing to "cc/processor0/constant/polyMesh"
+
+Reading processor 1 mesh from "cc/processor1"
+Writing pointProcAddressing to "cc/processor1/constant/polyMesh"
+Writing faceProcAddressing to "cc/processor1/constant/polyMesh"
+Writing cellProcAddressing to "cc/processor1/constant/polyMesh"
+Writing boundaryProcAddressing to "cc/processor1/constant/polyMesh"
+
+Reading processor 2 mesh from "cc/processor2"
+Writing pointProcAddressing to "cc/processor2/constant/polyMesh"
+Writing faceProcAddressing to "cc/processor2/constant/polyMesh"
+Writing cellProcAddressing to "cc/processor2/constant/polyMesh"
+Writing boundaryProcAddressing to "cc/processor2/constant/polyMesh"
+
+Reading processor 3 mesh from "cc/processor3"
+Writing pointProcAddressing to "cc/processor3/constant/polyMesh"
+Writing faceProcAddressing to "cc/processor3/constant/polyMesh"
+Writing cellProcAddressing to "cc/processor3/constant/polyMesh"
+Writing boundaryProcAddressing to "cc/processor3/constant/polyMesh"
+
+Time = 100
+
+No mesh.
+
+Time = 200
+
+No mesh.
+
+Time = 300
+
+No mesh.
+
+Time = 400
+
+No mesh.
+
+Time = 500
+
+No mesh.
+
+End.
+
