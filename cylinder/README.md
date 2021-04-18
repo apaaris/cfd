@@ -1,3 +1,3 @@
 ## Results
 
-![vid](U.avi)
+![vid](U.gif)
