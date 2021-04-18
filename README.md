@@ -9,3 +9,5 @@ $ paraview foam.foam &
 Then load the settings with: File -> Load State -> set.pvsm
 
 **Attention: folder polyMesh ignored since it is too large for GitHub**
+
+![gif](cylinder/U.gif)
