@@ -1,0 +1,99 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8
+Exec   : patchSummary -parallel
+Date   : Apr 21 2021
+Time   : 14:03:05
+Host   : "Arch"
+PID    : 8976
+I/O    : uncollated
+Case   : /home/apaaris/cfd/main
+nProcs : 4
+Slaves : 
+3
+(
+"Arch.8977"
+"Arch.8978"
+"Arch.8979"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Time = 0
+
+Valid fields:
+[0] 
+[0] 
+[0] --> FOAM FATAL IO ERROR: 
+[0] size 4402 is not equal to the given value of 790
+[0] 
+[0] file: /home/apaaris/cfd/main/processor0/0/thickness/boundaryField/lowerWall from line 41 to line 42.
+[0] 
+[0]     From function Foam::Field<Type>::Field(const Foam::word&, const Foam::dictionary&, Foam::label) [with Type = double; Foam::label = int]
+[0]     in file [3] 
+[3] 
+[3] --> FOAM FATAL IO ERROR: 
+[3] size 4402 is not equal to the given value of 1554
+[3] 
+[3] file: /home/apaaris/cfd/main/processor3/0/thickness/boundaryField/lowerWall from line 41 to line [2] 
+[2] 
+[2] --> FOAM FATAL IO ERROR: 
+/build/openfoam/src/OpenFOAM-8/src/OpenFOAM/lnInclude/Field.C at line 210.
+[0] 
+FOAM parallel run exiting
+[0] 
+[2] size 4402 is not equal to the given value of 1462
+[2] 
+[2] file: /home/apaaris/cfd/main/processor2/0/thickness/boundaryField/lowerWall from line 41 to line 42.42.
+[3] 
+[3]     From function Foam::Field<Type>::Field(const Foam::word&, const Foam::dictionary&, Foam::label) [with Type = double; Foam::label = int]
+[3]     in file /build/openfoam/src/OpenFOAM-8/src/OpenFOAM/lnInclude/Field.C at line 210.
+[3] 
+FOAM parallel run exiting
+[3] 
+
+[2] 
+[2]     From function Foam::Field<Type>::Field(const Foam::word&, const Foam::dictionary&, Foam::label) [with Type = double; Foam::label = int]
+[2]     in file /build/openfoam/src/OpenFOAM-8/src/OpenFOAM/lnInclude/Field.C at line 210.
+[2] 
+FOAM parallel run exiting
+[2] 
+[1] 
+[1] 
+[1] --> FOAM FATAL IO ERROR: 
+[1] size 4402 is not equal to the given value of 596
+[1] 
+[1] file: /home/apaaris/cfd/main/processor1/0/thickness/boundaryField/lowerWall from line 41 to line 42.
+[1] 
+[1]     From function Foam::Field<Type>::Field(const Foam::word&, const Foam::dictionary&, Foam::label) [with Type = double; Foam::label = int]
+[1]     in file /build/openfoam/src/OpenFOAM-8/src/OpenFOAM/lnInclude/Field.C at line 210.
+[1] 
+FOAM parallel run exiting
+[1] 
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 3 in communicator MPI COMMUNICATOR 3 SPLIT FROM 0
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[Arch:08972] 3 more processes have sent help message help-mpi-api.txt / mpi-abort
+[Arch:08972] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
