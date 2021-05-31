@@ -1,3 +1,0 @@
-## Results
-
-![vid](U.gif)
